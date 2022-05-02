@@ -3,9 +3,9 @@ from unittest import mock
 from unittest.mock import patch
 from DB import *
 from API import *
-
 class Tests(unittest.TestCase):
     
+    #Se realizaron pruebas unitarias de mock para probar que las llamadas a la base de datos sean correctas
     @patch('DB.ConexionBD.eliminar_equipo', return_value = True)
     def test_eliminar_equipo(self, mock):
         bd = ConexionBD()
@@ -22,7 +22,7 @@ class Tests(unittest.TestCase):
         assert resultado_esperado == resultado_actual 
     
     
-    @patch('DB.ConexionBD.eliminar_pokemon', return_value = True)
+    @patch('DB.ConexionBD .eliminar_pokemon', return_value = True)
     def test_eliminar_pokemon(self,mock):
         bd = ConexionBD()
         resultado_esperado = True

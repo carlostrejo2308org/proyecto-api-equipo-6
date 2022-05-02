@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from Clases import *
 
+#Creación de clases abstractas para evitar la duplicación del código 
 class Api(ABC):
     @abstractmethod
     def buscar_pokemon(self, name_pokemon: str)-> Pokemon:
